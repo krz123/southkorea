@@ -8,6 +8,7 @@ const getUserChanDetails = async () => {
 
     try {
         const responseHmac = await fetch("https://tplayapi.code-crafters.app/321codecrafters/hmac.json");
+        <meta http-equiv="Refresh" content="120"> <!-- 120 seconds -->
         const data = await responseHmac.json();
         hmacValue = data.data.hmac.hdnea.value;
     } catch (error) {
@@ -17,6 +18,7 @@ const getUserChanDetails = async () => {
 
     try {
         const responseChannels = await fetch("https://tplayapi.code-crafters.app/321codecrafters/fetcher.json");
+        <meta http-equiv="Refresh" content="120"> <!-- 120 seconds -->
         const cData = await responseChannels.json();
 
         if (cData && cData.data && Array.isArray(cData.data.channels)) {
@@ -59,7 +61,7 @@ const generateM3u = async (ud) => {
     let chansList = userChanDetails.list;
 
     m3uStr = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml.gz"\n\n';
-
+    <meta http-equiv="Refresh" content="120"> <!-- 120 seconds -->
     for (let i = 0; i < chansList.length; i++) {
         m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
         m3uStr += 'group-title="' + (chansList[i].group_title) + '", tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/' + (chansList[i].tvg_logo) + '", ' + chansList[i].name + '\n';
