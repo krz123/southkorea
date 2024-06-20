@@ -7,7 +7,7 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://tplayapi.code-crafters.app/321codecrafters/hmac.json");
+        const responseHmac = await fetch("https://raw.githubusercontent.com/krz123/Hh/main/hmc");
         const data = await responseHmac.json();
         hmacValue = data.data.hmac.hdnea.value;
     } catch (error) {
@@ -16,7 +16,7 @@ const getUserChanDetails = async () => {
     }
 
     try {
-        const responseChannels = await fetch("https://tplayapi.code-crafters.app/321codecrafters/fetcher.json");
+        const responseChannels = await fetch("https://raw.githubusercontent.com/krz123/Hh/main/fetcher");
         
         const cData = await responseChannels.json();
 
