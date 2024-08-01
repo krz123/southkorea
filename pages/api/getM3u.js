@@ -7,7 +7,7 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://tm.tapi.videoready.tv/portal-search/pub/api/v1/channels?limit=1000");
+        const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
         const data = await responseHmac.json();
         hmacValue = data.data.hmac.hdntl.value;
     } catch (error) {
