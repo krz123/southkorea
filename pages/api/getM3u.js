@@ -7,7 +7,7 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/key/%7Bid%7D");
+        const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
         const data = await responseHmac.json();
         hmacValue = data.data.hmac.hdntl.value;
     } catch (error) {
