@@ -7,7 +7,7 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/channels");
+        const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/sliv/%7Bid%7D");
         const data = await responseHmac.json();
         hmacValue = data.data.hmac.hdntl.value;
     } catch (error) {
@@ -16,7 +16,7 @@ const getUserChanDetails = async () => {
     }
 
     try {
-        const responseChannels = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
+        const responseChannels = await fetch("https://fox.toxic-gang.xyz/tata/channels");
         const cData = await responseChannels.json();
 
         if (cData && cData.data && Array.isArray(cData.data.channels)) {
