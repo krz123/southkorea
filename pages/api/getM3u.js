@@ -17,7 +17,7 @@ const getUserChanDetails = async () => {
     }
 
     try {
-        const responseChannels = await fetch("https://lust.toxicify.pro/api/toxicify.json");
+        const responseChannels = await fetch("https://tm.tapi.videoready.tv/portal-search/pub/api/v1/channels?limit=1000");
         const cData = await responseChannels.json();
 
         if (cData && cData.data && Array.isArray(cData.data)) {
