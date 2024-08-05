@@ -30,7 +30,7 @@ const getUserChanDetails = async () => {
                 clearkeyValue = `https://clkey.vercel.app/api/results.php?keyid=${channel.licence1}&key=${channel.licence2}`;
             }
 
-            let firstGenre = channel.genres && channel.genres.length > 0 ? channel.genres[0] : null;
+            let firstGenre = channel.genres && channel.genres.length > 0 ? channel.genres[] : null;
             let rearrangedChannel = {
                 id: channel.id,
                 name: channel.title,
