@@ -9,7 +9,7 @@ const getUserChanDetails = async () => {
     try {
         const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
         const data = await responseHmac.json();
-        const hmacData = data[0];
+        const hmacData = data[];
         hmacValue = hmacData.data.hdntl;
     } catch (error) {
         console.error('Error fetching and rearranging HMAC data:', error);
