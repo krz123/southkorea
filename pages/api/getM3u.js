@@ -9,7 +9,7 @@ const getUserChanDetails = async () => {
     try {
         const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
         const data = await responseHmac.json();
-        const hmacData = data[];
+        const hmacData = data[0];
         hmacValue = hmacData.data.hdntl;
     } catch (error) {
         console.error('Error fetching and rearranging HMAC data:', error);
@@ -30,7 +30,7 @@ const getUserChanDetails = async () => {
                 clearkeyValue = `https://clkey.vercel.app/api/results.php?keyid=${channel.licence1}&key=${channel.licence2}`;
             }
 
-            let firstGenre = channel.genres && channel.genres.length > 0 ? channel.genres[] : null;
+            let firstGenre = channel.genres && channel.genres.length > 0 ? channel.genres[0] : null;
             let rearrangedChannel = {
                 id: channel.id,
                 name: channel.title,
